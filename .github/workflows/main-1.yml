@@ -11,7 +11,8 @@ jobs:
         steps: 
             - name: Print greeting
               run: | 
-                echo  Salut Reda 
+                echo  Salut Reda from ${{ github.workflow }}
                 echo welcome to this course
             - name: Print Good bye 
               run: echo bye bye 
+
