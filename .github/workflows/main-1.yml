@@ -1,8 +1,26 @@
-name: main-1
+name: main-1 worklflow
 
 
 on:
-    workflow_dispatch
+    workflow_dispatch:
+    # [push, workflow_dispatch]:
+        inputs: 
+            ENV:
+              required: true  
+              type: choice
+              description: environement 
+              options: 
+                - dev
+                - nprod
+                - prod
+            action:
+              required: true  
+              type: choice
+              description: action
+              options: 
+                - deploy
+                - destroy
+                - update
 
 
 jobs:
@@ -11,7 +29,7 @@ jobs:
         steps: 
             - name: Print greeting
               run: | 
-                echo  Salut Reda from ${{ github.workflow }}
+                echo  Salut Reda from ${{ github.workflow }} avec comme option ${{inputs.ENV}} et ${{inputs.action}}
                 echo welcome to this course
             - name: Print Good bye 
               run: echo bye bye 
