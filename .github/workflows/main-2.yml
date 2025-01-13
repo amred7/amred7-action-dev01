@@ -1,0 +1,12 @@
+name: main-2
+
+on:
+    workflow_dispatch 
+
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: First step
+              run: echo Salut reda from main-2
