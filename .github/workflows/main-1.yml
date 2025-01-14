@@ -38,7 +38,8 @@ jobs:
                 ls -l 
                 echo bye bye 
 
-    secund-job:
+    deploy-dev :
+        if: ${{ ( input.ENV == dev) && ( input.action == deploy) }}
         uses: ./.github/workflows/template.yml
         with:
             ENV: env=${{ inputs.ENV }}
