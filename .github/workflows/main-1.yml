@@ -39,7 +39,7 @@ jobs:
                 echo bye bye 
 
     deploy-dev :
-        if: ${{ ( input.ENV == dev) && ( input.action == deploy) }}
+        if: ${{ ( input.ENV == 'dev') && ( input.action == 'deploy') }}
         uses: ./.github/workflows/template.yml
         with:
             ENV: env=${{ inputs.ENV }}
