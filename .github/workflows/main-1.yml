@@ -38,3 +38,7 @@ jobs:
                 ls -l 
                 echo bye bye 
 
+    secund-job:
+        uses: ./.github/workflows/template.yml
+        with:
+            ENV: ${{ inputs.ENV }}

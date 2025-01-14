@@ -1,0 +1,17 @@
+name: template 
+
+on:
+    workflow_call:
+        inputs: 
+            ENV:
+              required: true  
+              type: string
+
+
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name : first-step
+              run : 
+                echo coucou pour lenvironment ${{ inputs.ENV }}
