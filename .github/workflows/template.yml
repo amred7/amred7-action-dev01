@@ -6,6 +6,9 @@ on:
             ENV:
               required: true  
               type: string
+            ACTION:
+              required: true  
+              type: string
 
 
 jobs:
@@ -14,4 +17,4 @@ jobs:
         steps:
             - name : first-step
               run : 
-                echo coucou pour lenvironment ${{ inputs.ENV }}
+                echo coucou pour lenvironment ${{ inputs.ENV }} et l action ${{ inputs.ACTION }}
