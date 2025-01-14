@@ -41,4 +41,4 @@ jobs:
     secund-job:
         uses: ./.github/workflows/template.yml
         with:
-            ENV: ${{ inputs.ENV }}
+            ENV: env=${{ inputs.ENV }}
