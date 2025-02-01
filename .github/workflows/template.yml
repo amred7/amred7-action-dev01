@@ -23,3 +23,13 @@ jobs:
                 echo coucou pour lenvironment ${{ inputs.ENV }} et l action ${{ inputs.ACTION }}
               env:
                 sa_172 : ${{ secrets.sa_172}}
+            - id: 'auth'
+              uses: 'google-github-actions/auth@v2'
+              with:
+                credentials_json: '${{ secrets.sa_172 }}'
+
+            - name: 'Set up Cloud SDK'
+              uses: 'google-github-actions/setup-gcloud@v2'
+
+            - name: 'Use gcloud CLI'
+              run: 'gcloud info'
