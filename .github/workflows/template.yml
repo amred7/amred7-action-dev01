@@ -33,3 +33,8 @@ jobs:
 
             - name: 'Use gcloud CLI'
               run: 'gcloud info'
+
+            - name: run-gcloud
+              run: |
+                gcloud config set project wiz-project-438714 
+                gcloud storage ls 
