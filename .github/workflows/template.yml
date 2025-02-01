@@ -10,6 +10,11 @@ on:
               required: true  
               type: string
 
+            sa_172:
+              required: true  
+              type: string
+              
+
 
 
 jobs:
@@ -20,4 +25,4 @@ jobs:
               run : 
                 echo coucou pour lenvironment ${{ inputs.ENV }} et l action ${{ inputs.ACTION }}
               env:
-                sa_172 : ${{ secrets.SA_TEST172}}
+                sa_172 : ${{ secrets.sa_172}}

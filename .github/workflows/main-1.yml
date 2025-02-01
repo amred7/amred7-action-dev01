@@ -44,4 +44,5 @@ jobs:
         with:
             ENV: env=${{ inputs.ENV }}
             ACTION: ${{ inputs.action }}
-            # sa_172 : ${{ secrets.SA_TEST172}}
+  
+            sa_172 : ${{ secrets.SA_TEST172}}
