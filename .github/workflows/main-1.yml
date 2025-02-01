@@ -42,7 +42,7 @@ jobs:
         if: ${{ ( inputs.ENV == 'dev') && ( inputs.action == 'deploy') }}
         uses: ./.github/workflows/template.yml
         with:
-            ENV: env=${{ inputs.ENV }}
+            ENV: ${{ inputs.ENV }}
             ACTION: ${{ inputs.action }}
-  
-            sa_172 : ${{ secrets.SA_TEST172}}
+        secrets:     
+            sa_172 : ${{ secrets.SA_TEST172 }}

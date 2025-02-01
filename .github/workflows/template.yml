@@ -9,13 +9,10 @@ on:
             ACTION:
               required: true  
               type: string
-
+        secrets:
             sa_172:
               required: true  
-              type: string
-              
-
-
+            
 
 jobs:
     first-job:
